@@ -75,7 +75,7 @@ jobs:
           path: ixbrl-viewer
           ref: ${{ inputs.ixbrl_viewer_ref }}
       - name: Set up Node JS
-        uses: actions/setup-node@v4.1.0
+        uses: actions/setup-node@v4.2.0
         with:
           node-version: ${{ inputs.node_version }}
       - name: Build ixbrl-viewer
@@ -88,9 +88,9 @@ jobs:
       - name: Cleanup ixbrl-viewer
         run: rm -rf ixbrl-viewer
       - name: Docker setup buildx
-        uses: docker/setup-buildx-action@v3.8.0
+        uses: docker/setup-buildx-action@v3.9.0
       - name: Docker build
-        uses: docker/build-push-action@v6.10.0
+        uses: docker/build-push-action@v6.13.0
         with:
           build-args: |
             "OPENSSL_VERSION=${{ inputs.openssl_version }}"
@@ -123,7 +123,7 @@ jobs:
           files: ${{ env.BUILD_ARTIFACT_PATH }}
       - name: Configure AWS Credentials
         if: startsWith(github.ref, 'refs/tags/')
-        uses: aws-actions/configure-aws-credentials@v4.0.2
+        uses: aws-actions/configure-aws-credentials@v4.1.0
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
