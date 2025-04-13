@@ -15,8 +15,5 @@ types-PyMySQL==1.0.19.7
 types-pytz==2023.3.0.0
 types-simplejson==3.20.0.20250326
 types-ujson==5.8.0.0
-types-regex==2024.11.6.20250403
-types-waitress==2.1.4.8
-
 -r requirements.txt
 requests>=2.32.0 # not directly required, pinned by Snyk to avoid a vulnerability
