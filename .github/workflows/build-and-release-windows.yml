@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download installer artifact
-        uses: actions/download-artifact@v4.2.1
+        uses: actions/download-artifact@v4.3.0
         with:
           name: ${{ needs.build.outputs.exe_uploaded_artifact_name }}
       - name: Download ZIP artifact
-        uses: actions/download-artifact@v4.2.1
+        uses: actions/download-artifact@v4.3.0
         with:
           name: ${{ needs.build.outputs.zip_uploaded_artifact_name }}
       - name: Upload release artifacts
