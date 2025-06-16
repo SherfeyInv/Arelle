@@ -1,5 +1,5 @@
 # core modules
-certifi==2024.7.4
+certifi==2025.6.15
 importlib-metadata==4.2; python_version < "3.8"
 lxml==4.9.2
 OpenPyXL==3.1.2
